@@ -1,0 +1,15 @@
+$georgia: 'Georgia', sans-serif;
+$arial: 'Arial', sans-serif;
+
+$pink: #F1CDB3;
+$gray:  #CDCDCD;
+$dark-gray: #545454;
+$black: #292929;
+$light-gray:#F6F6F6;
+
+
+@mixin sm-block() {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}

@@ -1,0 +1,307 @@
+@import 'global';
+
+.header {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 60px;
+        @include sm-block () {
+            padding-top: 30px;
+        }
+    }
+        &-logo {
+            &__title {
+                color: $pink;
+                margin-bottom: 10px;
+                font-size: 32px;
+                line-height: 1.1;
+            }
+            &__subtitle {
+                font-size: 13px;
+                font-family: $arial;
+                color: #fff;
+                letter-spacing: 0.1em;
+            }
+        }   
+}
+
+.nav {
+    &-menu {
+        display: flex;
+        gap: 35px;
+        @include sm-block () {
+            display: none;
+        }
+        &__item-link {
+            font-size: 15px;
+            line-height: 1.6;
+            color: $gray;
+        }
+    }
+}
+.nav-menu__item-link.active {
+    color: #FAFAFA;
+    border-bottom: 3px solid $pink;
+    padding-bottom: 3px;
+}
+
+.hero {
+    background-image: url(../assets/images/start-screen-gradient-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    height: 908px;
+    position: relative;
+    padding: 0;
+    @include sm-block() {
+        min-height: auto;
+        height: auto;
+    }
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 42px;
+        padding-top: 180px;
+        @include sm-block () {
+            flex-direction: column;
+            padding-top: 150px;
+            gap: 105px;
+        }
+    }
+    &-info {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &-title {
+        color: #fff;
+        font-style: 44px;
+        letter-spacing: 0;
+        max-width: 310px;
+        @include sm-block() {
+            font-size: 25px;
+            max-width: 224px;
+            margin: 0 auto;
+        }
+    }
+
+    &-text {
+        margin: 42px 0;
+        color: $gray;
+    }
+    &-img {
+        @include sm-block {
+            width: 260px;
+            height: 272px;
+        }
+      
+    }
+}
+
+
+.about {
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 120px;
+        @include sm-block() {
+            flex-direction: column-reverse;
+        }
+    }
+    &-info {
+        width: 430px;
+        @include sm-block () {
+            width: 369px;
+        }
+       }
+    &-title {
+        align-items: center;
+        justify-content: center;
+        max-width: 370px;
+    }     
+    &-text {
+        padding: 25px 0;
+        color: #4c4c4c; 
+        
+        &__pic {
+            color: #4c4c4c;
+        }
+    }
+}
+
+.friends {
+    background-color: $light-gray;
+    &-title {
+        max-width: 400px;
+        margin: 0 auto 60px;
+        text-align: center;
+    }
+
+    &-wrapper {
+        display: flex;
+        gap: 53px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    &-slider {
+        display: flex;
+        gap: 90px;
+        background-color: #FAFAFA;
+    }
+
+    &-item {
+        border-radius: 9px;
+        text-align: center;
+        
+        &__img {
+            border-radius: 9px 9px 0px 0px;
+        }
+
+        &__title {
+            margin: 30px 0;
+        }
+        
+        &__btn {
+            margin-bottom: 30px;
+            border: 2px solid #F1CDB3;
+            background-color: transparent;
+            // background-color: transparent; прозрачный фон
+            padding: 13px 43px;
+        }
+    }
+
+    &-arrow {
+        border: 2px solid $pink;
+        border-radius: 100px;
+        padding: 23px 19px;      
+    }
+
+    &-btn {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+
+.help {
+    &-title {
+        max-width: 320px;
+        margin: 0 auto 60px;
+        text-align: center;      
+    }
+
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 120px;
+        row-gap: 55px;
+        justify-content: center;
+    }
+
+    &-item {
+        text-align: center;
+
+        &__img{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+.donation {
+    background-color: $light-gray;
+
+    &-wrapper {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-info {
+        max-width: 380px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &-title {
+        max-width: 300px;
+    }
+    &-subtitle {
+        font-size: 15px;
+        line-height: 1.1;
+    }
+    &-btn {
+        border-radius: 9px;
+        color: $dark-gray;
+        font-size: 20px;
+        line-height: 1.15;
+        padding: 10px 15px;
+        width: 349px;
+        text-align: right;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            background-image: url(../assets/icons/credit-card.svg);
+            width: 30px;
+            height: 23px;
+        }
+    }
+    &-text {
+         color: #B2B2B2;
+         font-size: 12px;
+         line-height: 18px;
+         font-style: italic;
+    }
+}
+
+
+.footer {
+    background-image: url(../assets/images/footer-gradient-background.jpg);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
+    }
+    &-item {
+        max-width: 302px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &-title {
+        color: #fff;
+    }
+    &-contact {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        &__link {
+            font-size: 20px;
+            line-height: 1.15;
+            letter-spacing: 0.06em;
+            color: $pink;
+            font-family: $georgia;
+        }
+    }
+
+}
